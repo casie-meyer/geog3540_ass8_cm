@@ -116,7 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'us.geojson'
+	var polygonJSONFile = 'smallmultiples/us.geojson'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbersUSA();
 	var widthheightRatio = 0.4;
@@ -245,12 +245,12 @@
 			proj.projection(projection.fitSize([width, height], polygons));
 
 			////////////////////////////////////////////////////
-			// Normalize based multiplyby and divideby values
-			polygons.features.forEach(function(c) {
-				attributesToBeNormalized.forEach(function(d, i) {
-					c.properties[d] = recalculateAttribute(c.properties[d], multiplyBy[i], c.properties[divideBy[i]]);
-				});
-			});
+			Normalize based multiplyby and divideby values
+			//polygons.features.forEach(function(c) {
+				//attributesToBeNormalized.forEach(function(d, i) {
+					//c.properties[d] = recalculateAttribute(c.properties[d], multiplyBy[i], c.properties[divideBy[i]]);
+				//});
+			//});
 
 			// Set the buttons up for interactivity
 			buttons.forEach(function(d) {
